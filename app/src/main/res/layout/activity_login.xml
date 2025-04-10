@@ -28,7 +28,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/edtmobileNo"
         android:layout_marginHorizontal="20dp"
-        android:hint="Enter Mobile No"
+        android:hint="@string/enter_mobile_no"
         android:inputType="number"
         />
     <EditText
@@ -51,5 +51,7 @@
         android:layout_marginHorizontal="20dp"
         android:text="Login"
         android:backgroundTint="#38B000"
+        android:enabled="true"
+        android:id="@+id/btnlogin"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
