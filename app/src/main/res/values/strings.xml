@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AprilAndroid</string>
     <string name="enter_mobile_no">Enter Mobile No</string>
+    <string name="selected_date">Selected Date</string>
 </resources>
