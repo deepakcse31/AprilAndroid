@@ -1,6 +1,7 @@
 package com.example.aprilandroid;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -22,8 +23,17 @@ public class SplashScreen extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
-                startActivity(intent);
+                SharedPreferences sharedPreferences=getSharedPreferences("MyPrefs",MODE_PRIVATE);
+                String loginstatus=sharedPreferences.getString("loginstatus","false");
+                if (loginstatus.equals("true"))
+                {
+                    Intent intent=new Intent(getApplicationContext(),HomeActivity.class);
+                    startActivity(intent);
+                }else {
+
+                    Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+                    startActivity(intent);
+                }
             }
         },3000);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
