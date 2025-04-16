@@ -27,7 +27,7 @@ public class SplashScreen extends AppCompatActivity {
                 String loginstatus=sharedPreferences.getString("loginstatus","false");
                 if (loginstatus.equals("true"))
                 {
-                    Intent intent=new Intent(getApplicationContext(),BroadCastActivity.class);
+                    Intent intent=new Intent(getApplicationContext(),ImageActivity.class);
                     startActivity(intent);
                 }else {
 
