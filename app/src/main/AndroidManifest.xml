@@ -15,6 +15,12 @@
         android:theme="@style/Theme.AprilAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".SpinnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListAc"
+            android:exported="false" />
+        <activity
             android:name=".ListViewActivity"
             android:exported="false"
             android:theme="@style/Theme.AprilAndroid" />
